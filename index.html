@@ -9,13 +9,16 @@
 
   <script>
 
-const data = [
-  { x: 1, y: 1 },
-  { x: 2, y: 3 },
-  { x: 3, y: 2 },
-  { x: 4, y: 4 },
-  { x: 5, y: 5 }
-];
+let data = [];
+function generateData(n) {
+      for (var i = 0; i < n; i++) {
+        let x = Math.random() * 10;
+        let y = Math.random() * 100;
+        let d = { x: x, y: y };
+        data.push(d);
+      }
+}
+generateData(25);
 
 const xValues = data.map(point => point.x);
 const yValues = data.map(point => point.y);
